@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SQLCoon - Web SQL Editor</title>
+		
+		<script src="js/jquery/jquery-1.8.2.min.js"></script>
+		<script src="js/codemirror/codemirror.js"></script>
+		<script src="js/codemirror/mode/mysql/mysql.js"></script>
+		<script src="js/codemirror/keymap/vim.js"></script>
+		<script src="js/codemirror/lib/util/dialog.js"></script>
+		<script src="js/codemirror/lib/util/searchcursor.js"></script>
+		<script src="js/codemirror/lib/util/search.js"></script>
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<script src="js/sqlcoon.js"></script>
+
+		<link rel="stylesheet" href="js/codemirror/lib/util/dialog.css">
+		<link rel="stylesheet" href="js/codemirror/lib/codemirror.css">
+		<link rel="stylesheet" href="js/codemirror/doc/docs.css">
+		<link rel="stylesheet" href="js/codemirror/theme/monokai.css">
+		<link rel="stylesheet" href="js/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="css/sqlcoon.css">
+
+	</head>
+	<body>
+		<div id="header">
+			<div class="btn-group" data-toggle="buttons-checkbox">
+				<button type="button" class="btn btn-info" onmouseup="toggleSchemas(this)">Schemas</button>
+				<button type="button" class="btn active btn-info" onmouseup="toggleResultPanel(this)">Result Panel</button>
+				<button type="button" class="btn active btn-info" onmouseup="toggleOutputPanel(this)">Output Panel</button>
+			</div>
+			<div id="option-control">
+				<input type="checkbox" id="vim-mode" onclick="vimMode()">VIM Key Map
+				<input type="checkbox" id="dark-theme" onclick="darkTheme()">Dark Editor Theme
+			</div>
+		</div>
+		<div id="content">
+			<div id="left-panel">
+			</div>
+			<div id="right-panel">
+				<textarea id="code"></textarea>
+				<div id="result-panel">
+					<span class="lead title">Result set</span>
+					<button id="execute" class="btn btn-success" title="Ctrl+Shift+Enter" onclick="executeCode(editor.getValue())">Execute</button>
+					<div id="result"></div>
+					<hr />
+				</div>
+				<div id="output-panel">
+					<button id="clear" class="btn btn-info btn" onclick="clearOutput()">Clear</button>
+					<div id="output"></div>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+	</body>
+</html>

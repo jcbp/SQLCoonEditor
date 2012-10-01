@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+   <appsettings>
+     <servername>localhost</servername>
+     <serverport></serverport>
+     <username>root</username>
+     <password></password>
+     <database>watercoon</database>
+   </appsettings>
+</configuration>

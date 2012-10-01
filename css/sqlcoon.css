@@ -1,0 +1,98 @@
+body {
+	padding-top: 5px;
+}
+.CodeMirror {
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
+	font-size: 11pt;
+	line-height: 1.2em;
+	margin-top: 10px;
+}
+.activeline {background: #e8f2ff !important;}
+.dark-activeline {background: #434343 !important;}
+.null-cell {
+	background-color: gray;
+	color: white;
+	font-size: 7pt;
+}
+#result {
+	height: 260px;
+}
+#output, #result {
+	overflow: auto;
+	padding: 10px;
+}
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+	background-color: #e7e7ea !important;
+}
+.table tbody td {
+	padding: 2px 5px;
+}
+.alert {
+	margin-bottom: 5px !important;
+}
+#clear, #execute {
+	margin-left: 10px;
+	float: right;
+}
+#execute {
+	margin-top: 5px;
+}
+.title {
+	padding: 15px 0 0 15px;
+	display: inline-block;
+	margin-bottom: 5px !important;
+}
+#left-panel {
+	width: 180px;
+	height: 900px;
+	display: none;
+	float: left;
+	font-size: 12pt;
+	padding: 15px 10px 10px;
+	border-right: 1px solid #e4e4e5;
+}
+.left-panel-item {
+	padding: 3px;
+	cursor: pointer;
+}
+.left-panel-item i {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.left-panel-item:hover {
+	background-color: #e8f2ff;
+}
+.left-panel-item button {
+	border-style: none;
+	background-color: transparent;
+}
+#right-panel {
+}
+#result-panel {
+}
+#output-panel {
+	margin-top: 5px;
+}
+hr {
+	border-bottom: 1px solid silver;
+	margin-bottom: 10px;
+}
+.dropdown-menu {
+	padding: 10px;
+	margin-left: 25px;
+	font-size: 11pt;
+}
+.dropdown-menu li:hover {
+	background-color: #e8f2ff;
+}
+#option-control {
+	float: right;
+}
+#option-control input[type="checkbox"] {
+	margin: 5px 8px 5px 45px;
+}
+.btn-group {
+	display: inline;
+}
